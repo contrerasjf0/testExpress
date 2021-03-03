@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use(router);
 
-if (!process.env.NOW_REGION) {
+if (!process.env.VERCEL_REGION) {
   const PORT = 3000;
   app.listen(PORT, () => {
     console.log(`Listening at http://localhost:${PORT}/graphql`)

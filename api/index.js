@@ -7,7 +7,7 @@ const app = express();
 
 router = express.Router();
 
-router.get('/test', function(req, res) {
+router.get('/api', function(req, res) {
   res.send('I want a beer');
 });
 

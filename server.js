@@ -18,5 +18,3 @@ app.use(router);
 app.listen(3000, () => {
   console.log('The server is running on the port: ', 3000);
 });
-
-module.exports = app;

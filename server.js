@@ -15,6 +15,11 @@ app.use(cors());
 
 app.use(router);
 
-app.listen(3000, () => {
-  console.log('The server is running on the port: ', 3000);
-});
+if (!process.env.NOW_REGION) {
+  const PORT = 3000;
+  app.listen(PORT, () => {
+    console.log(`Listening at http://localhost:${PORT}/graphql`)
+  })
+}
+
+module.exports = app
